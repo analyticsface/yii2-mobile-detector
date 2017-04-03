@@ -19,6 +19,11 @@
     "yiisoft/yii2": "~2.0",
     "mobiledetect/mobiledetectlib": "^2.8"
   },
+  "autoload": {
+    "psr-4": {
+      "aface\\mobiledetector\\": ""
+    }
+  },
   "extra": {
     "asset-installer-paths": {
       "npm-asset-library": "vendor/npm",

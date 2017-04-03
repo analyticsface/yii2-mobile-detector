@@ -12,12 +12,12 @@ set.
 Either run
 
 ```
-composer require aface/yii2-mobile-detector:*
+composer require analyticsface/yii2-mobile-detector:*
 ```
 or add
 
 ```json
-"aface/yii2-mobile-detector" : "*"
+"analyticsface/yii2-mobile-detector" : "*"
 ```
 
 to the require section of your application's `composer.json` file.
