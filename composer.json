@@ -1,5 +1,5 @@
 {
-  "name": "aface/yii2-mobile-detector",
+  "name": "analyticsface/yii2-mobile-detector",
   "description": "Mobile detector for Yii2 Framework.",
   "type": "yii2-extension",
   "keywords": ["yii2", "yii 2", "mobile detector"],
@@ -12,8 +12,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/aface/yii2-mobile-detector/issues?state=open",
-    "source": "https://github.com/aface/yii2-mobile-detector"
+    "issues": "https://github.com/analyticsface/yii2-mobile-detector/issues?state=open",
+    "source": "https://github.com/analyticsface/yii2-mobile-detector"
   },
   "require": {
     "yiisoft/yii2": "~2.0",
