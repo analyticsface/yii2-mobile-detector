@@ -92,7 +92,7 @@ a) add to main Asset
 ```
 public $sourcePath = '@theme';
 ```
-b) add bootstrap
+b) add bootstrap and aliases
 ```
 'bootstrap' => [
     'log',
@@ -101,5 +101,9 @@ b) add bootstrap
        'themesPath' => '@frontend/themes/'
     ],
     ...
+],
+...
+'aliases' => [
+    '@theme' => '@frontend/themes/desktop', // path to Theme default
 ],
 ```
