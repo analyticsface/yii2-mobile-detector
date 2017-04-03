@@ -25,6 +25,12 @@ to the require section of your application's `composer.json` file.
 Usage
 -----
 
+add rule for hide 'index' action
+```
+'<controller:\w+>/' => '<controller>/index'
+```
+
+
 1) Add to /frontend/config/bootstrap.php
 
 ```
@@ -74,3 +80,26 @@ Yii::$container->set('aface\mobiledetector\mode\ClientMode', function () {
     'params' => $params,
 ```
 
+4) Add to layout switch link 
+
+```
+<?= Html::a('Mobile version', Url::current(['mode' => 'mobile']), ['data-method' => 'post']) ?>
+```
+
+5) If css/js files used from theme
+
+a) add to main Asset
+```
+public $sourcePath = '@theme';
+```
+b) add bootstrap
+```
+'bootstrap' => [
+    'log',
+    [
+       'class' => 'aface\mobiledetector\bootstrap\Bootstrap',
+       'themesPath' => '@frontend/themes/'
+    ],
+    ...
+],
+```

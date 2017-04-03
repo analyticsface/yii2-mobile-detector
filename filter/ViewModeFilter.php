@@ -33,7 +33,11 @@ class ViewModeFilter extends ActionFilter
                 'value' => $mode,
                 'expire' => time() + $this->expire,
             ]));
-            $response->redirect(Url::current(['mode' => null]), 301);
+            $url = Url::current(['mode' => null]);
+            if (ltrim($url, '/') == Yii::$app->defaultRoute) {
+                $url = '/';
+            }
+            $response->redirect($url, 301);
             return false;
         }
         return true;
