@@ -92,18 +92,21 @@ a) add to main Asset
 ```
 public $sourcePath = '@theme';
 ```
-b) add bootstrap and aliases
+b) add alias
 ```
-'bootstrap' => [
-    'log',
-    [
-       'class' => 'aface\mobiledetector\bootstrap\Bootstrap',
-       'themesPath' => '@frontend/themes/'
-    ],
-    ...
-],
-...
-'aliases' => [
-    '@theme' => '@frontend/themes/desktop', // path to Theme default
-],
+'components' => [
+        'view' => function (\aface\mobiledetector\mode\ViewMode $mode) {
+
+            $theme = Yii::$app->request->getCookies()->getValue(\aface\mobiledetector\mode\ClientMode::COOKIE_NAME);
+
+            if ($theme === null) {
+                $theme = $mode->isMobile() ? 'mobile' : 'desktop';
+            }
+
+            Yii::setAlias('theme', '@frontend/themes/' . $theme);
+
+            ...   
+        },
+        ...
+    ]
 ```
